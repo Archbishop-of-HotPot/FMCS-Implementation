@@ -10,12 +10,13 @@ pip install -r requirements.txt
 PyTorch is **not** included in `requirements.txt` to prevent OS/CUDA conflicts.
 
 **Tested Environment:** PyTorch 2.3.0 + CUDA 12.1
+
 While other versions may work, we recommend aligning with this version if you encounter dependency conflicts.
 
 **For CUDA 12.1 (Recommended):**
 ```bash
 pip install torch torchvision --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
-
+```
 ## Experiments
 
 ### Experiment 1: Checkerboard
