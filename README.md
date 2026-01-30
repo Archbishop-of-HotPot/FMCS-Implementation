@@ -19,7 +19,7 @@ pip install torch torchvision --index-url [https://download.pytorch.org/whl/cu12
 Please install the correct version compatible with your system.
 *(Recommended version: torch>=2.3.0)*
 
-## 🧪 Experiments
+## Experiments
 
 ### Experiment 1: Checkerboard
 Run the following notebook directly to reproduce the checkerboard experiment results:
