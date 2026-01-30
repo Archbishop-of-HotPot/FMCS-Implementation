@@ -60,7 +60,7 @@ class BsplineProjector:
             except:
                 pass
 
-        print(f"✅ Projector Ready! ({time.time() - t0:.4f}s)")
+        print(f"Projector Ready! ({time.time() - t0:.4f}s)")
 
     def _get_derivative_matrix(self, n, p, T, order=2):
         n_inner = n - (p + 1)
@@ -142,7 +142,7 @@ def main():
         seed_cps = data["cps"]
         label_id = data["label"]
 
-        print(f"\n🚀 Processing Mode: [{mode_name}] (Label: {label_id})")
+        print(f"\n Processing Mode: [{mode_name}] (Label: {label_id})")
 
         valid_trajs_batch = []
         stats = {"ok": 0, "fail_solve": 0, "fail_coll": 0}
@@ -173,7 +173,7 @@ def main():
             print(f"   -> Progress: {len(valid_trajs_batch)}/{SAMPLES_PER_MODE} "
                   f"| Fail(QP):{stats['fail_solve']} | Fail(Coll):{stats['fail_coll']}", end='\r')
 
-        print(f"   ✅ Done.")
+        print(f"   Done.")
 
         all_trajs.append(np.array(valid_trajs_batch))
 
@@ -194,4 +194,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
