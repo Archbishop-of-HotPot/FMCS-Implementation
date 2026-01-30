@@ -25,6 +25,7 @@ Please install the correct version compatible with your system.
 Run the following notebook directly to reproduce the checkerboard experiment results:
 - **Notebook:** `Experiment1_checkerbord.ipynb`
 
+
 ### Experiment 2: 3D Navigation
 
 **Step 1: Data Generation (Optional)**
@@ -35,6 +36,7 @@ If you wish to regenerate the dataset from scratch, run the following commands i
 ```bash
 python Experiment2_3DNavigation/generate_data/Step1_generate_seeds.py
 python Experiment2_3DNavigation/generate_data/Step2_Noise_Add.py
+```
 
 **Step 2: Main Experiment**
 Run the main notebook to train and evaluate:
