@@ -57,7 +57,7 @@ def load_model(key, save_dir, device):
     import glob
     files = glob.glob(os.path.join(save_dir, f"{prefix}_*.pth"))
     if not files:
-        print(f"⚠️ Warning: Model {key} not found in {save_dir}")
+        print(f"Warning: Model {key} not found in {save_dir}")
         return None, None
     path = max(files, key=os.path.getmtime)
     print(f"   [Model] Load: {os.path.basename(path)}")
@@ -79,7 +79,7 @@ def load_model(key, save_dir, device):
 
 # Generate function
 def generate_viz_data(config):
-    print(f"⚡ [Backend] Generating Data (Sample={config['SAMPLE_IDX']})...")
+    print(f" [Backend] Generating Data (Sample={config['SAMPLE_IDX']})...")
     DEVICE = config['DEVICE']
 
     # A. Dataset
@@ -131,8 +131,7 @@ def generate_viz_data(config):
         "model_cfg": cfg
     }
 # ==========================================
-# 2. 绘图辅助
-# ==========================================
+
 STYLES = {
     0: {"c": "#1f77b4", "lw": 2.5, "z": 3},  # Top (Blue)
     1: {"c": "#ff7f0e", "lw": 2.5, "z": 2},  # Side (Orange)
