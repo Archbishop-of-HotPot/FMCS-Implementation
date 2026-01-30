@@ -1,6 +1,6 @@
 # FMCS-Implementation
 ## Installation
-
+**Prerequisites:** Python 3.12
 ### 1. Install Dependencies
 First, install the core libraries using the provided requirements file:
 ```bash
