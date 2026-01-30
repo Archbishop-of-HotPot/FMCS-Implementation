@@ -34,8 +34,9 @@ Run the following notebook directly to reproduce the checkerboard experiment res
 If you wish to regenerate the dataset from scratch, run the following commands in order:
 
 ```bash
-python Experiment2_3DNavigation/generate_data/Step1_generate_seeds.py
-python Experiment2_3DNavigation/generate_data/Step2_Noise_Add.py
+cd Experiment2_3DNavigation/generate_data
+python Step1_generate_seeds.py
+python Step2_Noise_Add.py
 ```
 
 **Step 2: Main Experiment**
