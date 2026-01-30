@@ -1,0 +1,15 @@
+# Core Dependencies
+cvxpy==1.7.5
+diffusers==0.36.0
+matplotlib==3.9.4
+matplotlib-inline==0.1.7
+numpy==1.26.3
+plotly==6.0.0
+scipy==1.16.3
+torchdiffeq==0.2.5
+tqdm==4.66.2
+
+# Deep Learning Framework
+# Install manually based on CUDA version
+# torch>=2.3.0
+# torchvision>=0.18.0
