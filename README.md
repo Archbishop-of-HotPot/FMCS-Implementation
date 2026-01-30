@@ -39,5 +39,6 @@ python Experiment2_3DNavigation/generate_data/Step2_Noise_Add.py
 ```
 
 **Step 2: Main Experiment**
+
 Run the main notebook to train and evaluate:
 - **Notebook:** `Experiment2_3DNavigation/experiment_main.ipynb`
