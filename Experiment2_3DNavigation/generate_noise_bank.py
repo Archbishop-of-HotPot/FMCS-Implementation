@@ -61,7 +61,7 @@ def generate_bank(args):
         return
 
     n_cores = args.cores if args.cores > 0 else max(1, cpu_count() - 2)
-    print(f"⚙️ Using {n_cores} CPU cores.")
+    print(f" Using {n_cores} CPU cores.")
     
     raw_list, proj_list = [], []
     init_args = (mean, std, args.n_cps, args.degree, args.dim, args.time, args.limit, args.std_factor)

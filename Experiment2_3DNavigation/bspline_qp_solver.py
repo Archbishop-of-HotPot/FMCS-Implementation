@@ -46,7 +46,7 @@ class ExactBsplineSolver:
         try:
             self.prob.solve(solver=cp.CLARABEL, verbose=False)
         except Exception as e:
-            print(f"⚠️ Warm-up failed: {e}")
+            print(f"Warm-up failed: {e}")
 
 
     def _get_derivative_matrix(self, n, p, T, order=2, knot_type='uniform'):

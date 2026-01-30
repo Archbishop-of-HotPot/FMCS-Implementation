@@ -261,9 +261,6 @@ def draw_custom_plot(ax, data, method_name):
                     c='#d0d0d0', lw=2.5, alpha=1.0, zorder= 11)
 
         traj_final = hist_steps[-1]
-        if method_name == 'Ours':
-            p = solver.solve(traj_final)
-            if p is not None: traj_final = p
 
         ax.plot(traj_final[:, 0], traj_final[:, 1], traj_final[:, 2],
                 c=target_color, lw=3.5, alpha=1.0, zorder=base_z + 100)
@@ -344,9 +341,6 @@ def main(user_config=None):
         draw_env(ax2)
         for lid in [0, 1, 2]:
             t = h_ours[lid][safe_step]
-            if step == CONFIG['STEPS']:
-                p = solver.solve(t);
-                t = p if p is not None else t
             s = STYLES[lid]
             ax2.plot(t[:, 0], t[:, 1], t[:, 2], c=s['c'], lw=s['lw'], zorder=s['z'])
             if step == CONFIG['STEPS']:
@@ -358,9 +352,6 @@ def main(user_config=None):
         # ax3.set_title(f"Ours Acc (Step {step})", fontsize=10)
         for lid in [0, 1, 2]:
             t_traj = h_ours[lid][safe_step]
-            if step == CONFIG['STEPS']:
-                p = solver.solve(t_traj);
-                t_traj = p if p is not None else t_traj
             t_plot, acc = calc_acc(t_traj, data['model_cfg'])
             s = STYLES[lid]
             ax3.plot(t_plot, acc, c=s['c'], lw=s['lw'], zorder=s['z'], alpha=0.9)
